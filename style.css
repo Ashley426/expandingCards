@@ -51,13 +51,14 @@ body {
   /* if active change */
 .panel.active h3{
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
 }
   /* add media query so if screen small it only shows less than more  */
 @media(max-width:480px){
     .container{
         width: 100vw;
     }
-    
+
     .panel:nth-of-type(4), .panel:nth-of-type(5){
         display:none;
     }
