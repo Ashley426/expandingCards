@@ -33,3 +33,33 @@ body {
     position: relative;
     transition: flex 0.7s ease-in;
 }
+
+/* puts name at bottom and shapes panel */
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+
+}
+ /* if panel active change flex */
+.panel.active{
+    flex: 5;
+}
+  /* if active change */
+.panel.active h3{
+    opacity: 1;
+}
+  /* add media query so if screen small it only shows less than more  */
+@media(max-width:480px){
+    .container{
+        width: 100vw;
+    }
+    
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display:none;
+    }
+}
+
